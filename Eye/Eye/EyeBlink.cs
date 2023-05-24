@@ -26,10 +26,15 @@ namespace Eye
 
             this.BackColor = Color.White; // Define a cor de fundo
             this.TransparencyKey = Color.White; // Define a cor transparente
-            this.TopMost = true; // Torna o formulário sempre visível no topo
+            this.TopMost = false; // Torna o formulário sempre visível no topo
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 0); // Define a posição no canto superior direito
             this.FormBorderStyle = FormBorderStyle.None; // Remove a borda do formulário
             this.Opacity = 0.5; // Define a opacidade desejada (0.0 - 1.0)
+        }
+
+        private void pictureBoxEyeBlink_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

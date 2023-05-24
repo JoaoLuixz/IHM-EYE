@@ -20,9 +20,9 @@ namespace Eye
         private void btnStart_Click(object sender, EventArgs e)
         {
             btnStop.Visible = true;
-            pictureBoxMainFormEye2.Visible = true;
+            //pictureBoxMainFormEye2.Visible = true;
 
-            pictureBoxMainFormEye.BackColor = Color.Red; // Define a cor desejada para o olho (substitua "pictureBoxEye" pelo nome do seu controle PictureBox)
+            //pictureBoxMainFormEye.BackColor = Color.Red; // Define a cor desejada para o olho (substitua "pictureBoxEye" pelo nome do seu controle PictureBox)
             if (blink == null)
             {
                 blink = new EyeBlink();
@@ -44,16 +44,18 @@ namespace Eye
 
             if (shouldBlink)
             {
-                blink.BackColor = Color.WhiteSmoke; // Altere a cor para a cor desejada quando a pessoa deve piscar
+                //blink.BackColor = Color.WhiteSmoke; // Altere a cor para a cor desejada quando a pessoa deve piscar
+                blink.ShowEye();
+                
             }
             else
             {
-                blink.BackColor = Color.White; // Restaure a cor de fundo translúcida 
+                //blink.BackColor = Color.White; // Restaure a cor de fundo translúcida 
+                blink.HideEye();
             }
 
             //pictureBoxMainFormEye.Visible = !pictureBoxMainFormEye.Visible; // Alterna a visibilidade do controle PictureBox
-            pictureBoxMainFormEye.BackColor = Color.White;
-
+            //pictureBoxMainFormEye.BackColor = Color.White;
         }
 
         private void btnStop_Click(object sender, EventArgs e)

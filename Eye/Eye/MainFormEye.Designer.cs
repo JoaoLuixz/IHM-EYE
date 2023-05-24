@@ -41,7 +41,7 @@
             // btnStart
             // 
             btnStart.FlatStyle = FlatStyle.Popup;
-            btnStart.Location = new Point(266, 511);
+            btnStart.Location = new Point(273, 511);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(147, 36);
             btnStart.TabIndex = 0;
@@ -52,7 +52,7 @@
             // pictureBoxMainFormEye
             // 
             pictureBoxMainFormEye.Image = (Image)resources.GetObject("pictureBoxMainFormEye.Image");
-            pictureBoxMainFormEye.Location = new Point(172, 186);
+            pictureBoxMainFormEye.Location = new Point(172, 168);
             pictureBoxMainFormEye.Name = "pictureBoxMainFormEye";
             pictureBoxMainFormEye.Size = new Size(355, 241);
             pictureBoxMainFormEye.SizeMode = PictureBoxSizeMode.Zoom;
@@ -63,7 +63,7 @@
             // btnStop
             // 
             btnStop.FlatStyle = FlatStyle.Popup;
-            btnStop.Location = new Point(291, 553);
+            btnStop.Location = new Point(298, 553);
             btnStop.Name = "btnStop";
             btnStop.Size = new Size(102, 31);
             btnStop.TabIndex = 2;
@@ -74,7 +74,7 @@
             // btnResume
             // 
             btnResume.FlatStyle = FlatStyle.Popup;
-            btnResume.Location = new Point(291, 553);
+            btnResume.Location = new Point(298, 553);
             btnResume.Name = "btnResume";
             btnResume.Size = new Size(102, 31);
             btnResume.TabIndex = 3;
@@ -85,7 +85,7 @@
             // pictureBoxMainFormEye2
             // 
             pictureBoxMainFormEye2.Image = (Image)resources.GetObject("pictureBoxMainFormEye2.Image");
-            pictureBoxMainFormEye2.Location = new Point(172, 186);
+            pictureBoxMainFormEye2.Location = new Point(172, 167);
             pictureBoxMainFormEye2.Name = "pictureBoxMainFormEye2";
             pictureBoxMainFormEye2.Size = new Size(355, 241);
             pictureBoxMainFormEye2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -107,7 +107,9 @@
             Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(5, 4, 5, 4);
+            MaximizeBox = false;
             Name = "MainFormEye";
+            Opacity = 0.95D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Eye";
             Load += MainFormEye_Load;

@@ -33,9 +33,12 @@
             pictureBoxMainFormEye = new PictureBox();
             btnStop = new Button();
             btnResume = new Button();
-            pictureBoxMainFormEye2 = new PictureBox();
+            menuStripMainForm = new MenuStrip();
+            inícioToolStripMenuItem = new ToolStripMenuItem();
+            configuraçõesToolStripMenuItem = new ToolStripMenuItem();
+            sobreToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye2).BeginInit();
+            menuStripMainForm.SuspendLayout();
             SuspendLayout();
             // 
             // btnStart
@@ -82,16 +85,38 @@
             btnResume.UseVisualStyleBackColor = true;
             btnResume.Click += btnResume_Click;
             // 
-            // pictureBoxMainFormEye2
+            // menuStripMainForm
             // 
-            pictureBoxMainFormEye2.Image = (Image)resources.GetObject("pictureBoxMainFormEye2.Image");
-            pictureBoxMainFormEye2.Location = new Point(172, 167);
-            pictureBoxMainFormEye2.Name = "pictureBoxMainFormEye2";
-            pictureBoxMainFormEye2.Size = new Size(355, 241);
-            pictureBoxMainFormEye2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxMainFormEye2.TabIndex = 4;
-            pictureBoxMainFormEye2.TabStop = false;
-            pictureBoxMainFormEye2.Click += pictureBoxMainFormEye2_Click;
+            menuStripMainForm.BackColor = SystemColors.ControlDark;
+            menuStripMainForm.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            menuStripMainForm.Items.AddRange(new ToolStripItem[] { inícioToolStripMenuItem, configuraçõesToolStripMenuItem, sobreToolStripMenuItem });
+            menuStripMainForm.Location = new Point(0, 0);
+            menuStripMainForm.Name = "menuStripMainForm";
+            menuStripMainForm.Size = new Size(699, 24);
+            menuStripMainForm.TabIndex = 5;
+            menuStripMainForm.Text = "menuStrip1";
+            // 
+            // inícioToolStripMenuItem
+            // 
+            inícioToolStripMenuItem.Checked = true;
+            inícioToolStripMenuItem.CheckState = CheckState.Indeterminate;
+            inícioToolStripMenuItem.Name = "inícioToolStripMenuItem";
+            inícioToolStripMenuItem.Size = new Size(50, 20);
+            inícioToolStripMenuItem.Text = "Início";
+            inícioToolStripMenuItem.Click += inícioToolStripMenuItem_Click;
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            configuraçõesToolStripMenuItem.Size = new Size(104, 20);
+            configuraçõesToolStripMenuItem.Text = "Configurações";
+            configuraçõesToolStripMenuItem.Click += configuraçõesToolStripMenuItem_Click;
+            // 
+            // sobreToolStripMenuItem
+            // 
+            sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
+            sobreToolStripMenuItem.Size = new Size(54, 20);
+            sobreToolStripMenuItem.Text = "Sobre";
             // 
             // MainFormEye
             // 
@@ -99,23 +124,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(699, 642);
-            Controls.Add(pictureBoxMainFormEye2);
             Controls.Add(btnResume);
             Controls.Add(btnStop);
             Controls.Add(pictureBoxMainFormEye);
             Controls.Add(btnStart);
+            Controls.Add(menuStripMainForm);
             Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = menuStripMainForm;
             Margin = new Padding(5, 4, 5, 4);
             MaximizeBox = false;
             Name = "MainFormEye";
-            Opacity = 0.95D;
+            Opacity = 0.98D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Eye";
             Load += MainFormEye_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye2).EndInit();
+            menuStripMainForm.ResumeLayout(false);
+            menuStripMainForm.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -124,6 +152,9 @@
         private PictureBox pictureBoxMainFormEye;
         private Button btnStop;
         private Button btnResume;
-        private PictureBox pictureBoxMainFormEye2;
+        private MenuStrip menuStripMainForm;
+        private ToolStripMenuItem inícioToolStripMenuItem;
+        private ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private ToolStripMenuItem sobreToolStripMenuItem;
     }
 }

@@ -2,9 +2,12 @@ namespace Eye
 {
     public partial class MainFormEye : Form
     {
+        MainFormEye MainEyeForm;
+        Configs ConfigForm;
         private EyeBlink blink; //eyeForm
         private System.Windows.Forms.Timer timer;
         private bool shouldBlink = false;
+
 
 
         public MainFormEye()
@@ -28,8 +31,6 @@ namespace Eye
                 blink = new EyeBlink();
                 blink.Show();
 
-
-
                 timer = new System.Windows.Forms.Timer();
                 timer.Interval = 2000; // Intervalo de 2 segundos (2000ms)
                 timer.Tick += Timer_Tick;
@@ -46,7 +47,7 @@ namespace Eye
             {
                 //blink.BackColor = Color.WhiteSmoke; // Altere a cor para a cor desejada quando a pessoa deve piscar
                 blink.ShowEye();
-                
+
             }
             else
             {
@@ -64,7 +65,7 @@ namespace Eye
             blink.Visible = false; // Oculta o controle do olho (substitua "blink" pelo nome do seu controle de olho)
             btnStop.Visible = false;
             btnResume.Visible = true;
-            pictureBoxMainFormEye2.Visible = false;
+       
 
         }
 
@@ -72,7 +73,7 @@ namespace Eye
         {
             btnResume.Visible = false;
             btnStop.Visible = false;
-            pictureBoxMainFormEye2.Visible = false;
+ 
         }
 
         private void btnResume_Click(object sender, EventArgs e)
@@ -81,12 +82,35 @@ namespace Eye
             blink.Visible = true; // Torna o controle do olho visível (substitua "blink" pelo nome do seu controle de olho)
             btnResume.Visible = false;
             btnStop.Visible = true;
-            pictureBoxMainFormEye2.Visible = true;
         }
 
         private void pictureBoxMainFormEye2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void inícioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //MainEyeForm.Activate();
+        }
+
+        private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ConfigForm == null)
+            {
+                ConfigForm = new Configs(blink);
+                ConfigForm.ShowDialog();
+                resetConfig();
+            }
+            else
+            {
+                ConfigForm.Activate();
+            }
+        }
+        private void resetConfig()
+        {
+            ConfigForm = null; // Redefine a variável ConfigForm para null quando o formulário é fechado
         }
     }
 

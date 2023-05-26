@@ -37,6 +37,7 @@
             btnConfigsTimeBlinkRight = new Button();
             lbConfigsTimeBlink = new Label();
             lbConfigsTimer = new Label();
+            lbConfigsMovement = new Label();
             SuspendLayout();
             // 
             // btnConfigsUp
@@ -152,12 +153,28 @@
             lbConfigsTimer.Text = "Temporizador";
             lbConfigsTimer.TextAlign = ContentAlignment.MiddleRight;
             // 
+            // lbConfigsMovement
+            // 
+            lbConfigsMovement.AccessibleRole = AccessibleRole.None;
+            lbConfigsMovement.AutoSize = true;
+            lbConfigsMovement.BackColor = Color.Transparent;
+            lbConfigsMovement.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbConfigsMovement.ForeColor = SystemColors.ActiveCaptionText;
+            lbConfigsMovement.Location = new Point(121, 240);
+            lbConfigsMovement.Name = "lbConfigsMovement";
+            lbConfigsMovement.Size = new Size(166, 25);
+            lbConfigsMovement.TabIndex = 9;
+            lbConfigsMovement.Text = "Movimentação";
+            lbConfigsMovement.TextAlign = ContentAlignment.MiddleRight;
+            lbConfigsMovement.Click += label1_Click;
+            // 
             // Configs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(406, 450);
+            Controls.Add(lbConfigsMovement);
             Controls.Add(lbConfigsTimer);
             Controls.Add(lbConfigsTimeBlink);
             Controls.Add(btnConfigsTimeBlinkRight);
@@ -170,6 +187,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "Configs";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Configs";
             Load += Configs_Load;
@@ -187,5 +205,6 @@
         private Button btnConfigsTimeBlinkRight;
         private Label lbConfigsTimeBlink;
         private Label lbConfigsTimer;
+        private Label lbConfigsMovement;
     }
 }

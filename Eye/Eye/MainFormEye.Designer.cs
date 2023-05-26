@@ -34,7 +34,6 @@
             btnStop = new Button();
             btnResume = new Button();
             menuStripMainForm = new MenuStrip();
-            inícioToolStripMenuItem = new ToolStripMenuItem();
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             sobreToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye).BeginInit();
@@ -89,21 +88,12 @@
             // 
             menuStripMainForm.BackColor = SystemColors.ControlDark;
             menuStripMainForm.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            menuStripMainForm.Items.AddRange(new ToolStripItem[] { inícioToolStripMenuItem, configuraçõesToolStripMenuItem, sobreToolStripMenuItem });
+            menuStripMainForm.Items.AddRange(new ToolStripItem[] { configuraçõesToolStripMenuItem, sobreToolStripMenuItem });
             menuStripMainForm.Location = new Point(0, 0);
             menuStripMainForm.Name = "menuStripMainForm";
             menuStripMainForm.Size = new Size(699, 24);
             menuStripMainForm.TabIndex = 5;
             menuStripMainForm.Text = "menuStrip1";
-            // 
-            // inícioToolStripMenuItem
-            // 
-            inícioToolStripMenuItem.Checked = true;
-            inícioToolStripMenuItem.CheckState = CheckState.Indeterminate;
-            inícioToolStripMenuItem.Name = "inícioToolStripMenuItem";
-            inícioToolStripMenuItem.Size = new Size(50, 20);
-            inícioToolStripMenuItem.Text = "Início";
-            inícioToolStripMenuItem.Click += inícioToolStripMenuItem_Click;
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -132,13 +122,14 @@
             Controls.Add(menuStripMainForm);
             Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStripMainForm;
             Margin = new Padding(5, 4, 5, 4);
             MaximizeBox = false;
             Name = "MainFormEye";
             Opacity = 0.98D;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Eye";
+            Text = "Blink";
             Load += MainFormEye_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxMainFormEye).EndInit();
             menuStripMainForm.ResumeLayout(false);
@@ -154,7 +145,6 @@
         private Button btnStop;
         private Button btnResume;
         private MenuStrip menuStripMainForm;
-        private ToolStripMenuItem inícioToolStripMenuItem;
         private ToolStripMenuItem configuraçõesToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
     }

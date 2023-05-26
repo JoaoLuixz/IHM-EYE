@@ -15,7 +15,6 @@ namespace Eye
         EyeBlink BlinkChange;
         MainFormEye MainEyeTime;
         System.Windows.Forms.Timer TimerChange;
-        //public int BlinkTime { get; set; }
         public Configs()
         {
             InitializeComponent();
@@ -71,7 +70,7 @@ namespace Eye
 
         private void Configs_Load(object sender, EventArgs e)
         {
-            lbConfigsTimeBlink.Text = $"{MainEyeTime.BlinkTime}";
+            lbConfigsTimeBlink.Text = $"{MainEyeTime.BlinkTime}s";
         }
 
         private void btnConfigsTimeBlinkLeft_Click(object sender, EventArgs e)
@@ -104,6 +103,11 @@ namespace Eye
         }
 
         private void lbConfigsTimeBlink_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

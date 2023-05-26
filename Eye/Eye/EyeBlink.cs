@@ -24,37 +24,31 @@ namespace Eye
 
         private void EyeBlink_Load(object sender, EventArgs e)
         {
-
-            //this.BackColor = Color.FromArgb(128, 255, 255, 255); // Define a cor de fundo translúcida
-            //this.TransparencyKey = Color.FromArgb(128, 255, 255, 255); // Define a cor transparente
-            //this.TopMost = true; // Torna o formulário sempre visível no topo
-            //this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 0); // Define a posição no canto superior direito
-
-            this.BackColor = Color.White; // Define a cor de fundo
-            this.TransparencyKey = Color.White; // Define a cor transparente
-            this.TopMost = true; // Torna o formulário sempre visível no topo
-            /*this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 5);*/ // Define a posição no canto superior direito
+            this.BackColor = Color.White; // cor de fundo
+            this.TransparencyKey = Color.White; // define qual cor deve ser transparente
+            this.TopMost = true; // Torna o formulátio sempre visível
+            //this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 5); // Define a posição no canto superior direito
             this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - localizacaoX, Screen.PrimaryScreen.WorkingArea.Height - this.Width - localizacaoY);
-            this.FormBorderStyle = FormBorderStyle.None; // Remove a borda do formulário
-            this.Opacity = 0.5; // Define a opacidade desejada (0.0 - 1.0)
+            this.FormBorderStyle = FormBorderStyle.None; // Remove borda
+            this.Opacity = 0.5;
         }
-        public void MoveXRight()
+        public void MoveXRight() // Método move formuláio para a direita
         {
             localizacaoX = localizacaoX + 75;
             this.Location = new Point(localizacaoX, this.Location.Y);
         }
-        public void MoveXLeft()
+        public void MoveXLeft() // Método move formuláio para a esquerda
         {
             localizacaoX = localizacaoX - 75;
             this.Location = new Point(localizacaoX, this.Location.Y);
         }
-        public void MoveYDown()
+        public void MoveYDown() // Método move formuláio para baixo
         {
             localizacaoY = localizacaoY + 75;
             this.Location = new Point(this.Location.X, localizacaoY);
 
         }
-        public void MoveYUp()
+        public void MoveYUp() // Método move formuláio para cima
         {
             localizacaoY = localizacaoY - 75;
             this.Location = new Point(this.Location.X, localizacaoY);

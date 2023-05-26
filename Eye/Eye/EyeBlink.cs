@@ -24,7 +24,7 @@ namespace Eye
 
         private void EyeBlink_Load(object sender, EventArgs e)
         {
-            
+
             //this.BackColor = Color.FromArgb(128, 255, 255, 255); // Define a cor de fundo translúcida
             //this.TransparencyKey = Color.FromArgb(128, 255, 255, 255); // Define a cor transparente
             //this.TopMost = true; // Torna o formulário sempre visível no topo
@@ -40,23 +40,23 @@ namespace Eye
         }
         public void MoveXRight()
         {
-            localizacaoX = localizacaoX + 90;
+            localizacaoX = localizacaoX + 75;
             this.Location = new Point(localizacaoX, this.Location.Y);
         }
         public void MoveXLeft()
         {
-            localizacaoX = localizacaoX - 90;
+            localizacaoX = localizacaoX - 75;
             this.Location = new Point(localizacaoX, this.Location.Y);
         }
         public void MoveYDown()
         {
-            localizacaoY = localizacaoY + 90;
+            localizacaoY = localizacaoY + 75;
             this.Location = new Point(this.Location.X, localizacaoY);
 
         }
         public void MoveYUp()
         {
-            localizacaoY = localizacaoY - 90;
+            localizacaoY = localizacaoY - 75;
             this.Location = new Point(this.Location.X, localizacaoY);
 
         }
@@ -69,7 +69,7 @@ namespace Eye
         public void ShowEye()
         {
             pictureBoxEyeBlink.Visible = true; // Mostra picture box
-            pictureBoxEyeBlink2.Visible = false; 
+            pictureBoxEyeBlink2.Visible = false;
         }
 
         public void HideEye()

@@ -67,6 +67,9 @@
             Controls.Add(pictureBoxEyeBlink);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EyeBlink";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "EyeBlink";
             Load += EyeBlink_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxEyeBlink).EndInit();

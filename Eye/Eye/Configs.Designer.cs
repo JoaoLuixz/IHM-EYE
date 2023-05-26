@@ -33,6 +33,10 @@
             btnConfigsDown = new Button();
             btnConfigsRight = new Button();
             btnConfigsLeft = new Button();
+            btnConfigsTimeBlinkLeft = new Button();
+            btnConfigsTimeBlinkRight = new Button();
+            lbConfigsTimeBlink = new Label();
+            lbConfigsTimer = new Label();
             SuspendLayout();
             // 
             // btnConfigsUp
@@ -91,23 +95,86 @@
             btnConfigsLeft.UseVisualStyleBackColor = false;
             btnConfigsLeft.Click += btnConfigsLeft_Click;
             // 
+            // btnConfigsTimeBlinkLeft
+            // 
+            btnConfigsTimeBlinkLeft.BackColor = SystemColors.AppWorkspace;
+            btnConfigsTimeBlinkLeft.BackgroundImage = (Image)resources.GetObject("btnConfigsTimeBlinkLeft.BackgroundImage");
+            btnConfigsTimeBlinkLeft.BackgroundImageLayout = ImageLayout.Stretch;
+            btnConfigsTimeBlinkLeft.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnConfigsTimeBlinkLeft.ForeColor = SystemColors.ControlDark;
+            btnConfigsTimeBlinkLeft.Location = new Point(121, 102);
+            btnConfigsTimeBlinkLeft.Name = "btnConfigsTimeBlinkLeft";
+            btnConfigsTimeBlinkLeft.Size = new Size(66, 32);
+            btnConfigsTimeBlinkLeft.TabIndex = 5;
+            btnConfigsTimeBlinkLeft.UseVisualStyleBackColor = false;
+            btnConfigsTimeBlinkLeft.Click += btnConfigsTimeBlinkLeft_Click;
+            // 
+            // btnConfigsTimeBlinkRight
+            // 
+            btnConfigsTimeBlinkRight.BackColor = SystemColors.AppWorkspace;
+            btnConfigsTimeBlinkRight.BackgroundImage = (Image)resources.GetObject("btnConfigsTimeBlinkRight.BackgroundImage");
+            btnConfigsTimeBlinkRight.BackgroundImageLayout = ImageLayout.Stretch;
+            btnConfigsTimeBlinkRight.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnConfigsTimeBlinkRight.ForeColor = SystemColors.ControlDark;
+            btnConfigsTimeBlinkRight.Location = new Point(207, 102);
+            btnConfigsTimeBlinkRight.Name = "btnConfigsTimeBlinkRight";
+            btnConfigsTimeBlinkRight.Size = new Size(66, 32);
+            btnConfigsTimeBlinkRight.TabIndex = 6;
+            btnConfigsTimeBlinkRight.UseVisualStyleBackColor = false;
+            btnConfigsTimeBlinkRight.Click += btnConfigsTimeBlinkRight_Click;
+            // 
+            // lbConfigsTimeBlink
+            // 
+            lbConfigsTimeBlink.AccessibleRole = AccessibleRole.None;
+            lbConfigsTimeBlink.AutoSize = true;
+            lbConfigsTimeBlink.BackColor = Color.Transparent;
+            lbConfigsTimeBlink.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbConfigsTimeBlink.ForeColor = SystemColors.ActiveCaptionText;
+            lbConfigsTimeBlink.Location = new Point(186, 59);
+            lbConfigsTimeBlink.Name = "lbConfigsTimeBlink";
+            lbConfigsTimeBlink.Size = new Size(63, 25);
+            lbConfigsTimeBlink.TabIndex = 7;
+            lbConfigsTimeBlink.Text = "Time";
+            lbConfigsTimeBlink.TextAlign = ContentAlignment.MiddleRight;
+            lbConfigsTimeBlink.Click += lbConfigsTimeBlink_Click;
+            // 
+            // lbConfigsTimer
+            // 
+            lbConfigsTimer.AccessibleRole = AccessibleRole.None;
+            lbConfigsTimer.AutoSize = true;
+            lbConfigsTimer.BackColor = Color.Transparent;
+            lbConfigsTimer.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbConfigsTimer.ForeColor = SystemColors.ActiveCaptionText;
+            lbConfigsTimer.Location = new Point(121, 20);
+            lbConfigsTimer.Name = "lbConfigsTimer";
+            lbConfigsTimer.Size = new Size(157, 25);
+            lbConfigsTimer.TabIndex = 8;
+            lbConfigsTimer.Text = "Temporizador";
+            lbConfigsTimer.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // Configs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(406, 450);
+            Controls.Add(lbConfigsTimer);
+            Controls.Add(lbConfigsTimeBlink);
+            Controls.Add(btnConfigsTimeBlinkRight);
+            Controls.Add(btnConfigsTimeBlinkLeft);
             Controls.Add(btnConfigsUp);
             Controls.Add(btnConfigsRight);
             Controls.Add(btnConfigsLeft);
             Controls.Add(btnConfigsDown);
             ForeColor = SystemColors.ControlDark;
-            FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             Name = "Configs";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Configs";
+            Load += Configs_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -116,5 +183,9 @@
         private Button btnConfigsDown;
         private Button btnConfigsRight;
         private Button btnConfigsLeft;
+        private Button btnConfigsTimeBlinkLeft;
+        private Button btnConfigsTimeBlinkRight;
+        private Label lbConfigsTimeBlink;
+        private Label lbConfigsTimer;
     }
 }

@@ -4,15 +4,18 @@ namespace Eye
     {
         MainFormEye MainEyeForm;
         Configs ConfigForm;
+        Sobre SobreForm;
         private EyeBlink blink; //eyeForm
-        private System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.Timer timer;
         private bool shouldBlink = false;
+        public int BlinkTime { get; set; }
 
 
 
         public MainFormEye()
         {
             InitializeComponent();
+            BlinkTime = 1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -30,9 +33,15 @@ namespace Eye
             {
                 blink = new EyeBlink();
                 blink.Show();
-
                 timer = new System.Windows.Forms.Timer();
-                timer.Interval = 2000; // Intervalo de 2 segundos (2000ms)
+                if (BlinkTime == 1)
+                {
+                    timer.Interval = 1000;
+                }
+                else
+                {
+                    timer.Interval = BlinkTime; // Intervalo em ms (padrão 1000ms)
+                }
                 timer.Tick += Timer_Tick;
                 timer.Start();
 
@@ -65,7 +74,7 @@ namespace Eye
             blink.Visible = false; // Oculta o controle do olho (substitua "blink" pelo nome do seu controle de olho)
             btnStop.Visible = false;
             btnResume.Visible = true;
-       
+
 
         }
 
@@ -73,7 +82,7 @@ namespace Eye
         {
             btnResume.Visible = false;
             btnStop.Visible = false;
- 
+
         }
 
         private void btnResume_Click(object sender, EventArgs e)
@@ -99,7 +108,7 @@ namespace Eye
         {
             if (ConfigForm == null)
             {
-                ConfigForm = new Configs(blink);
+                ConfigForm = new Configs(blink, this);
                 ConfigForm.ShowDialog();
                 resetConfig();
             }
@@ -111,6 +120,24 @@ namespace Eye
         private void resetConfig()
         {
             ConfigForm = null; // Redefine a variável ConfigForm para null quando o formulário é fechado
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SobreForm == null)
+            {
+                SobreForm = new Sobre();
+                SobreForm.ShowDialog();
+                resetSobre();
+            }
+            else
+            {
+                SobreForm.Activate();
+            }
+        }
+        private void resetSobre()
+        {
+            SobreForm = null; // Redefine a variável ConfigForm para null quando o formulário é fechado
         }
     }
 

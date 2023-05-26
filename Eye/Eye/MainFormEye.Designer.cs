@@ -117,6 +117,7 @@
             sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             sobreToolStripMenuItem.Size = new Size(54, 20);
             sobreToolStripMenuItem.Text = "Sobre";
+            sobreToolStripMenuItem.Click += sobreToolStripMenuItem_Click;
             // 
             // MainFormEye
             // 

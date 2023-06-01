@@ -104,12 +104,62 @@ namespace Eye
 
         private void lbConfigsTimeBlink_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnPanelTopMiddle_Click(object sender, EventArgs e)
+        {
+            //Screen.PrimaryScreen.WorkingArea.Width - localizacaoX, Screen.PrimaryScreen.WorkingArea.Height - this.Width - localizacaoY;
+            BlinkChange.MoveToTopMiddle();
+        }
+
+        private void btnPanelTopRight_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToTopRight();
+        }
+
+        private void btnPanelRight_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToRight();
+        }
+
+        private void btnPanelBottomRight_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToBottomRight();
+        }
+
+        private void btnPanelBottom_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToBottom();
+        }
+
+        private void btnPanelBottomLeft_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToBottomLeft();
+        }
+
+        private void btnPanelLeft_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToLeft();
+        }
+
+        private void btnPanelTopLeft_Click(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToTopLeft();
+        }
+
+        private void btnPanelMiddle_Click_1(object sender, EventArgs e)
+        {
+            BlinkChange.MoveToMiddle();
+        }
+
+        private void toolTipConfigsPanel_Popup(object sender, PopupEventArgs e)
+        {
         }
     }
 }

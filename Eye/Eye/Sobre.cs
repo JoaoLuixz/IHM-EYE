@@ -19,7 +19,6 @@ namespace Eye
 
         private void Sobre_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

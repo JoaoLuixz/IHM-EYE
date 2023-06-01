@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Configs));
             btnConfigsUp = new Button();
             btnConfigsDown = new Button();
@@ -38,6 +39,19 @@
             lbConfigsTimeBlink = new Label();
             lbConfigsTimer = new Label();
             lbConfigsMovement = new Label();
+            panelPresetPosition = new Panel();
+            btnPanelMiddle = new Button();
+            btnPanelRight = new Button();
+            btnPanelLeft = new Button();
+            btnPanelBottom = new Button();
+            btnPanelTopMiddle = new Button();
+            btnPanelBottomRight = new Button();
+            btnPanelBottomLeft = new Button();
+            btnPanelTopLeft = new Button();
+            btnPanelTopRight = new Button();
+            label1 = new Label();
+            toolTipConfigsPanel = new ToolTip(components);
+            panelPresetPosition.SuspendLayout();
             SuspendLayout();
             // 
             // btnConfigsUp
@@ -47,7 +61,7 @@
             btnConfigsUp.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsUp.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsUp.ForeColor = SystemColors.ControlDark;
-            btnConfigsUp.Location = new Point(182, 288);
+            btnConfigsUp.Location = new Point(82, 289);
             btnConfigsUp.Name = "btnConfigsUp";
             btnConfigsUp.Size = new Size(32, 66);
             btnConfigsUp.TabIndex = 0;
@@ -61,7 +75,7 @@
             btnConfigsDown.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsDown.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsDown.ForeColor = SystemColors.ControlDark;
-            btnConfigsDown.Location = new Point(182, 375);
+            btnConfigsDown.Location = new Point(82, 376);
             btnConfigsDown.Name = "btnConfigsDown";
             btnConfigsDown.Size = new Size(32, 66);
             btnConfigsDown.TabIndex = 1;
@@ -75,7 +89,7 @@
             btnConfigsRight.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsRight.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsRight.ForeColor = SystemColors.ControlDark;
-            btnConfigsRight.Location = new Point(207, 347);
+            btnConfigsRight.Location = new Point(107, 348);
             btnConfigsRight.Name = "btnConfigsRight";
             btnConfigsRight.Size = new Size(66, 32);
             btnConfigsRight.TabIndex = 2;
@@ -89,7 +103,7 @@
             btnConfigsLeft.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsLeft.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsLeft.ForeColor = SystemColors.ControlDark;
-            btnConfigsLeft.Location = new Point(121, 347);
+            btnConfigsLeft.Location = new Point(21, 348);
             btnConfigsLeft.Name = "btnConfigsLeft";
             btnConfigsLeft.Size = new Size(66, 32);
             btnConfigsLeft.TabIndex = 4;
@@ -103,7 +117,7 @@
             btnConfigsTimeBlinkLeft.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsTimeBlinkLeft.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsTimeBlinkLeft.ForeColor = SystemColors.ControlDark;
-            btnConfigsTimeBlinkLeft.Location = new Point(121, 102);
+            btnConfigsTimeBlinkLeft.Location = new Point(237, 348);
             btnConfigsTimeBlinkLeft.Name = "btnConfigsTimeBlinkLeft";
             btnConfigsTimeBlinkLeft.Size = new Size(66, 32);
             btnConfigsTimeBlinkLeft.TabIndex = 5;
@@ -117,7 +131,7 @@
             btnConfigsTimeBlinkRight.BackgroundImageLayout = ImageLayout.Stretch;
             btnConfigsTimeBlinkRight.Font = new Font("Showcard Gothic", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnConfigsTimeBlinkRight.ForeColor = SystemColors.ControlDark;
-            btnConfigsTimeBlinkRight.Location = new Point(207, 102);
+            btnConfigsTimeBlinkRight.Location = new Point(323, 348);
             btnConfigsTimeBlinkRight.Name = "btnConfigsTimeBlinkRight";
             btnConfigsTimeBlinkRight.Size = new Size(66, 32);
             btnConfigsTimeBlinkRight.TabIndex = 6;
@@ -131,7 +145,7 @@
             lbConfigsTimeBlink.BackColor = Color.Transparent;
             lbConfigsTimeBlink.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbConfigsTimeBlink.ForeColor = SystemColors.ActiveCaptionText;
-            lbConfigsTimeBlink.Location = new Point(186, 59);
+            lbConfigsTimeBlink.Location = new Point(302, 280);
             lbConfigsTimeBlink.Name = "lbConfigsTimeBlink";
             lbConfigsTimeBlink.Size = new Size(63, 25);
             lbConfigsTimeBlink.TabIndex = 7;
@@ -146,7 +160,7 @@
             lbConfigsTimer.BackColor = Color.Transparent;
             lbConfigsTimer.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbConfigsTimer.ForeColor = SystemColors.ActiveCaptionText;
-            lbConfigsTimer.Location = new Point(121, 20);
+            lbConfigsTimer.Location = new Point(237, 241);
             lbConfigsTimer.Name = "lbConfigsTimer";
             lbConfigsTimer.Size = new Size(157, 25);
             lbConfigsTimer.TabIndex = 8;
@@ -160,7 +174,7 @@
             lbConfigsMovement.BackColor = Color.Transparent;
             lbConfigsMovement.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lbConfigsMovement.ForeColor = SystemColors.ActiveCaptionText;
-            lbConfigsMovement.Location = new Point(121, 240);
+            lbConfigsMovement.Location = new Point(21, 241);
             lbConfigsMovement.Name = "lbConfigsMovement";
             lbConfigsMovement.Size = new Size(166, 25);
             lbConfigsMovement.TabIndex = 9;
@@ -168,12 +182,139 @@
             lbConfigsMovement.TextAlign = ContentAlignment.MiddleRight;
             lbConfigsMovement.Click += label1_Click;
             // 
+            // panelPresetPosition
+            // 
+            panelPresetPosition.Controls.Add(btnPanelMiddle);
+            panelPresetPosition.Controls.Add(btnPanelRight);
+            panelPresetPosition.Controls.Add(btnPanelLeft);
+            panelPresetPosition.Controls.Add(btnPanelBottom);
+            panelPresetPosition.Controls.Add(btnPanelTopMiddle);
+            panelPresetPosition.Controls.Add(btnPanelBottomRight);
+            panelPresetPosition.Controls.Add(btnPanelBottomLeft);
+            panelPresetPosition.Controls.Add(btnPanelTopLeft);
+            panelPresetPosition.Controls.Add(btnPanelTopRight);
+            panelPresetPosition.Location = new Point(68, 50);
+            panelPresetPosition.Name = "panelPresetPosition";
+            panelPresetPosition.Size = new Size(274, 152);
+            panelPresetPosition.TabIndex = 10;
+            toolTipConfigsPanel.SetToolTip(panelPresetPosition, "Posição que o olho ficará na sua tela.\r\n");
+            // 
+            // btnPanelMiddle
+            // 
+            btnPanelMiddle.Location = new Point(108, 64);
+            btnPanelMiddle.Name = "btnPanelMiddle";
+            btnPanelMiddle.Size = new Size(51, 23);
+            btnPanelMiddle.TabIndex = 8;
+            btnPanelMiddle.Text = "👁‍🗨";
+            btnPanelMiddle.UseVisualStyleBackColor = true;
+            btnPanelMiddle.Click += btnPanelMiddle_Click_1;
+            // 
+            // btnPanelRight
+            // 
+            btnPanelRight.Location = new Point(223, 64);
+            btnPanelRight.Name = "btnPanelRight";
+            btnPanelRight.Size = new Size(51, 23);
+            btnPanelRight.TabIndex = 7;
+            btnPanelRight.Text = "👁‍🗨";
+            btnPanelRight.UseVisualStyleBackColor = true;
+            btnPanelRight.Click += btnPanelRight_Click;
+            // 
+            // btnPanelLeft
+            // 
+            btnPanelLeft.Location = new Point(0, 64);
+            btnPanelLeft.Name = "btnPanelLeft";
+            btnPanelLeft.Size = new Size(51, 23);
+            btnPanelLeft.TabIndex = 6;
+            btnPanelLeft.Text = "👁‍🗨";
+            btnPanelLeft.UseVisualStyleBackColor = true;
+            btnPanelLeft.Click += btnPanelLeft_Click;
+            // 
+            // btnPanelBottom
+            // 
+            btnPanelBottom.Location = new Point(108, 126);
+            btnPanelBottom.Name = "btnPanelBottom";
+            btnPanelBottom.Size = new Size(51, 23);
+            btnPanelBottom.TabIndex = 5;
+            btnPanelBottom.Text = "👁‍🗨";
+            btnPanelBottom.UseVisualStyleBackColor = true;
+            btnPanelBottom.Click += btnPanelBottom_Click;
+            // 
+            // btnPanelTopMiddle
+            // 
+            btnPanelTopMiddle.Location = new Point(108, 0);
+            btnPanelTopMiddle.Name = "btnPanelTopMiddle";
+            btnPanelTopMiddle.Size = new Size(51, 23);
+            btnPanelTopMiddle.TabIndex = 4;
+            btnPanelTopMiddle.Text = "👁‍🗨";
+            btnPanelTopMiddle.UseVisualStyleBackColor = true;
+            btnPanelTopMiddle.Click += btnPanelTopMiddle_Click;
+            // 
+            // btnPanelBottomRight
+            // 
+            btnPanelBottomRight.Location = new Point(223, 126);
+            btnPanelBottomRight.Name = "btnPanelBottomRight";
+            btnPanelBottomRight.Size = new Size(51, 23);
+            btnPanelBottomRight.TabIndex = 3;
+            btnPanelBottomRight.Text = "👁‍🗨";
+            btnPanelBottomRight.UseVisualStyleBackColor = true;
+            btnPanelBottomRight.Click += btnPanelBottomRight_Click;
+            // 
+            // btnPanelBottomLeft
+            // 
+            btnPanelBottomLeft.Location = new Point(0, 126);
+            btnPanelBottomLeft.Name = "btnPanelBottomLeft";
+            btnPanelBottomLeft.Size = new Size(51, 23);
+            btnPanelBottomLeft.TabIndex = 2;
+            btnPanelBottomLeft.Text = "👁‍🗨";
+            btnPanelBottomLeft.UseVisualStyleBackColor = true;
+            btnPanelBottomLeft.Click += btnPanelBottomLeft_Click;
+            // 
+            // btnPanelTopLeft
+            // 
+            btnPanelTopLeft.Location = new Point(0, 3);
+            btnPanelTopLeft.Name = "btnPanelTopLeft";
+            btnPanelTopLeft.Size = new Size(51, 23);
+            btnPanelTopLeft.TabIndex = 1;
+            btnPanelTopLeft.Text = "👁‍🗨";
+            btnPanelTopLeft.UseVisualStyleBackColor = true;
+            btnPanelTopLeft.Click += btnPanelTopLeft_Click;
+            // 
+            // btnPanelTopRight
+            // 
+            btnPanelTopRight.Location = new Point(223, 3);
+            btnPanelTopRight.Name = "btnPanelTopRight";
+            btnPanelTopRight.Size = new Size(51, 23);
+            btnPanelTopRight.TabIndex = 0;
+            btnPanelTopRight.Text = "👁‍🗨";
+            btnPanelTopRight.UseVisualStyleBackColor = true;
+            btnPanelTopRight.Click += btnPanelTopRight_Click;
+            // 
+            // label1
+            // 
+            label1.AccessibleRole = AccessibleRole.None;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(154, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 25);
+            label1.TabIndex = 9;
+            label1.Text = "Posições";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // toolTipConfigsPanel
+            // 
+            toolTipConfigsPanel.Popup += toolTipConfigsPanel_Popup;
+            // 
             // Configs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(406, 450);
+            Controls.Add(label1);
+            Controls.Add(panelPresetPosition);
             Controls.Add(lbConfigsMovement);
             Controls.Add(lbConfigsTimer);
             Controls.Add(lbConfigsTimeBlink);
@@ -191,6 +332,7 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "Configs";
             Load += Configs_Load;
+            panelPresetPosition.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,5 +348,17 @@
         private Label lbConfigsTimeBlink;
         private Label lbConfigsTimer;
         private Label lbConfigsMovement;
+        private Panel panelPresetPosition;
+        private Button btnPanelRight;
+        private Button btnPanelLeft;
+        private Button btnPanelBottom;
+        private Button btnPanelTopMiddle;
+        private Button btnPanelBottomRight;
+        private Button btnPanelBottomLeft;
+        private Button btnPanelTopLeft;
+        private Button btnPanelTopRight;
+        private Button btnPanelMiddle;
+        private Label label1;
+        private ToolTip toolTipConfigsPanel;
     }
 }

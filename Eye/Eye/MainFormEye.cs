@@ -32,7 +32,7 @@ namespace Eye
                 blink = new EyeBlink();
                 blink.Show();
                 timer = new System.Windows.Forms.Timer();
-                if (BlinkTime == 1)
+                if (BlinkTime == 1) // condição para que, qundo o Form inicar, não piscar fora do tempo.
                 {
                     timer.Interval = 1000;
                 }

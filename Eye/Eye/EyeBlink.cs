@@ -72,6 +72,42 @@ namespace Eye
             pictureBoxEyeBlink2.Visible = true;
 
         }
+        public void MoveToMiddle()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height / 2);
+        }
+        public void MoveToTopMiddle()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, 0);
+        }
+        public void MoveToTopRight()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 0);
+        }
+        public void MoveToRight()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, Screen.PrimaryScreen.WorkingArea.Height / 2);
+        }
+        public void MoveToBottomRight()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
+        }
+        public void MoveToBottom()
+        {
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
+        }
+        public void MoveToBottomLeft()
+        {
+            this.Location = new Point(0, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
+        }
+        public void MoveToLeft()
+        {
+            this.Location = new Point(0, Screen.PrimaryScreen.WorkingArea.Height / 2);
+        }
+        public void MoveToTopLeft()
+        {
+            this.Location = new Point(0, 0);
+        }
 
 
     }
